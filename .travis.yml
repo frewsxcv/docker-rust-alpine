@@ -5,3 +5,4 @@ language: generic
 script:
   - docker build -t rust-alpine .
   - docker run --rm rust-alpine sh -c "echo 'fn main() {}' > a.rs && rustc a.rs && ./a"
+  - docker run --rm -e "USER=test" rust-alpine sh -c "cargo new --bin b && cd b && cargo run"
