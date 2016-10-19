@@ -4,7 +4,6 @@ RUN echo '@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/ap
 
 RUN apk add --no-cache \
   cargo@testing \
-  curl \
   g++ \
   rust@testing
 
